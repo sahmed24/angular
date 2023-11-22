@@ -1,0 +1,1 @@
+To create a new angular project: ng new <app_name-NO_spaces in name> --no-strict --standalone false --routing false
