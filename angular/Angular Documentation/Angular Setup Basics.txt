@@ -1,1 +1,18 @@
-To create a new angular project: ng new <app_name-NO_spaces in name> --no-strict --standalone false --routing false
+* Angular Basics
+- To create a new angular project: ng new <app_name-NO_spaces in name> --no-strict --standalone false --routing false
+- Navigate inside the folder created and start the development server by the command: ng serve
+- To include bootstrap in the project, first install bootstrap using npm install --save bootstrap@3; and then add the path to the folder in angular.json file of the project.
+- To create components with the CLI use the command: ng generate component name_of_the_component; for example = ng generate component server, where server is the component name.
+- To create components with the CLI use the shortcut command: ng g c server.
+- To register new component in the module, you need to add the component name in the declarations array, only then Angular will be aware of the new component added. 
+- Data Binding:
+    - String Interpolation {{}} --> example: {{ propertName }} 
+    - Property Binding [] --> example: [disabled]="propertName"
+    - Event Binding () --> example: (click)="propertyName/methodName()/expression"
+    - 2 way Binding [()] --> example: [(ngModel)]="propertyName"
+- Directives are the instructions in the DOM.
+    - *ngIf="propertName/methodName()/Expression" - A structural directive meaning that the element will not be there until and unless the expression is not met.
+    - [ngStyle]="{key:value}" - Attribute directive where key is the element selector
+    - [ngClass]="{key:value}" - Attribute directive where key is the class name.
+    - *ngFor="let x of typescriptProperty" - structural directive
+        - if you want to get the index then *ngFor="let x of typescriptProperty; let i = index" - here you can fetch the index number of the Array.
