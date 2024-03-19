@@ -9,10 +9,11 @@
     - String Interpolation {{}} --> example: {{ propertName }} 
     - Property Binding [] --> example: [disabled]="propertName"
     - Event Binding () --> example: (click)="propertyName/methodName()/expression"
+        - In Event Binding you can also pass a special reserved varaible name '$event' as an argument to the method that the event is being binded on, and this special key will read, capture and hold the data of that particular event which can then be used/passed elsewhere.
     - 2 way Binding [()] --> example: [(ngModel)]="propertyName"
 - Directives are the instructions in the DOM.
     - *ngIf="propertName/methodName()/Expression" - A structural directive meaning that the element will not be there until and unless the expression is not met.
-    - [ngStyle]="{key:value}" - Attribute directive where key is the element selector
+    - [ngStyle]="{key:value}" - Attribute directive where key is the element selector.
     - [ngClass]="{key:value}" - Attribute directive where key is the class name.
     - *ngFor="let x of typescriptProperty" - structural directive
         - if you want to get the index then *ngFor="let x of typescriptProperty; let i = index" - here you can fetch the index number of the Array.
