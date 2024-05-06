@@ -13,7 +13,12 @@
     - 2 way Binding [()] --> example: [(ngModel)]="propertyName"
 - Directives are the instructions in the DOM.
     - *ngIf="propertName/methodName()/Expression" - A structural directive meaning that the element will not be there until and unless the expression is not met.
-    - [ngStyle]="{key:value}" - Attribute directive where key is the element selector.
-    - [ngClass]="{key:value}" - Attribute directive where key is the class name.
+    - [ngStyle]="{key:value}" - Attribute directive where key is the style name and the value is the a typescriptProperty/typescriptMethod evaluating to a style. It will change the CSS Style dynamically.
+    - [ngClass]="{key:value}" - Attribute directive where key is the class name and the value is the condition determining whether this class should be attached or not. It will add/remove the CSS Class dynamically.
     - *ngFor="let x of typescriptProperty" - structural directive
         - if you want to get the index then *ngFor="let x of typescriptProperty; let i = index" - here you can fetch the index number of the Array.
+- Binding to Custom properties 
+    - @Input() : If you want to allow parent component to be able to bind to a property from its child component then you need to use this decorator in front of the child components property.
+        1. So now any component that is hosting this child component via the selector will now be able to bind to that property. 
+        2. If you want to assign an Alias to the custom property that your are binding to; then you need to pass an argument enclosed in quotation marks with the newName that you want to use to call in the other (parent) component. Example: @Input('newName')
+- Binding to Custom events: Look at video 71 Section 5 for details.
